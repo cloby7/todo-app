@@ -1,0 +1,163 @@
+.header {
+  background: #0D0D0D;
+  display: flex;
+  height: 200px;
+  gap: 10%;
+}
+
+.logo__img {
+  background: url("../../assets/todoLogo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1px black;
+  width: 180px;
+  height: 130px;
+  animation: logo__animate 8s ease-in-out infinite 1s;
+  margin-left: 27%;
+  margin-top: 2.5%;
+}
+
+@keyframes logo__animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 50% 70% 40%;
+  }
+  50% {
+    border-radius: 50% 60% 70% 40%/50% 60% 70% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 50% 70%/60% 30% 70% 40%;
+  }
+}
+
+.newTaskForm {
+  position: relative;
+  height: 54px;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  gap: 0px;
+  padding: 0 1rem;
+  margin-left: -7%; /* Aligns the form to the right */
+  margin-top: 5%;
+}
+
+.newTaskForm input {
+  height: 100%;
+  width: 145%;
+  flex: 1;
+  color: #fff;
+  background: #262626;
+  border: 1px solid #0D0D0D;
+  border-radius: 8px 0px 0 8px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.newTaskForm input::placeholder {
+  color: #808080;
+}
+
+.newTaskForm button {
+  height: 100%;
+  padding: 0 16px;
+  background: #AFA8BA;
+  color: black;
+  border: none;
+  border-radius: 0px 8px 8px 0px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-left: 143%;
+  margin-top: -21%;
+}
+
+.newTaskForm button:hover {
+  background-color: #4A4453;
+  color: #fff;
+}
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 300px;
+    /* width: 100%; */
+  }
+
+  .logo__img {
+    margin: 0;
+    width: 150px;
+    height: 100px;
+    margin-top: 5%;
+  }
+
+  .newTaskForm {
+    margin: 0;
+    margin-left: 25%;
+    
+  }
+
+  .newTaskForm input {
+    width: 144%;
+    
+  }
+
+  .newTaskForm button {
+    /* margin-left: ; */
+    width: 100%;
+    width: fit-content;
+    height: 98%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header{
+    margin: 0;;
+    height: 250px;
+    color: black;
+    /* width: 150%; */
+  }
+
+  .logo__img {
+    width: 100px;
+    height: 80px;
+    margin-top: 5%;
+  }
+
+  .newTaskForm {
+    place-self: center;
+  }
+
+  .newTaskForm input {
+    font-size: 14px;
+    height: 80%;
+    width: 96%;
+    
+  }
+
+  .newTaskForm button {
+    height: 77%;
+    padding: 0 16px;
+    background: #AFA8BA;
+    color: black;
+    border: none;
+    border-radius: 0px 8px 8px 0px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 95%;
+    margin-top: -19%;
+    width: fit-content;
+  }
+}
+
+
